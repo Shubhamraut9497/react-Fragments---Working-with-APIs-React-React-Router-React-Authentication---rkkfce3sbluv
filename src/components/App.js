@@ -9,13 +9,8 @@ const App = () => {
   const [list, setList] = useState([]);
 
 
-  const onButtonClick = () => {
-    setList([])
-    for (let i = 1; i < Number(value)+1; i++) {
-      
-      setList((prev) => [...prev, i]);
-    }
-   
+   const onButtonClick = () => {
+   setList(Array.from({ length: `${value}` }, (v, i) => i))
   };
  
 
